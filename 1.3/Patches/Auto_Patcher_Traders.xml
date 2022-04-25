@@ -7,12 +7,12 @@
     <apply> 
       <Operation Class="PatchOperationConditional">
         <xpath>{TraderKindDef_Path}/stockGenerators/li[@Class="StockGenerator_Slaves" or @Class="StockGenerator_BuySlaves"]</xpath>
-		<nomatch Class="PatchOperationAdd">
+        <nomatch Class="PatchOperationAdd">
           <xpath>{TraderKindDef_Path}/stockGenerators</xpath>
           <value>
             <li Class="StockGenerator_BuySlaves" />
           </value>
-		</nomatch>
+        </nomatch>
       </Operation>
     </apply>
   </Operation>
