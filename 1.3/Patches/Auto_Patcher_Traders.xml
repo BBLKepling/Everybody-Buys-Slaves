@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="XmlExtensions.ForEach">
+    <xpath>Defs/TraderKindDef</xpath>
+    <storeIn>TraderKindDef_Path</storeIn>
+    <apply> 
+      <Operation Class="PatchOperationConditional">
+        <xpath>{TraderKindDef_Path}/stockGenerators/li[@Class="StockGenerator_Slaves" or @Class="StockGenerator_BuySlaves"]</xpath>
+		<nomatch Class="PatchOperationAdd">
+          <xpath>{TraderKindDef_Path}/stockGenerators</xpath>
+          <value>
+            <li Class="StockGenerator_BuySlaves" />
+          </value>
+		</nomatch>
+      </Operation>
+    </apply>
+  </Operation>
+
+</Patch>
