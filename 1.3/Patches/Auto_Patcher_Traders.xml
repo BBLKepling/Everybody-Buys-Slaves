@@ -2,7 +2,7 @@
 <Patch>
 
   <Operation Class="XmlExtensions.ForEach">
-    <xpath>Defs/TraderKindDef</xpath>
+    <xpath>Defs/TraderKindDef[not(defName="Guest")]</xpath> <!-- The filter is for Hospitality -->
     <storeIn>TraderKindDef_Path</storeIn>
     <apply> 
       <Operation Class="PatchOperationConditional">
