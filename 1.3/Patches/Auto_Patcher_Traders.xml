@@ -8,17 +8,29 @@
     <caseTrue>
 
       <Operation Class="XmlExtensions.ForEach">
-        <xpath>Defs/TraderKindDef[not(defName="Guest")]/defName[not(contains(text(), "Visitor_"))]</xpath> 
+        <xpath>Defs/TraderKindDef[not(defName="Guest")]</xpath> 
         <storeIn>TraderKindDef_Path</storeIn>
         <apply> 
-          <Operation Class="PatchOperationConditional">
-            <xpath>{TraderKindDef_Path}/stockGenerators/li[@Class="StockGenerator_Slaves" or @Class="StockGenerator_BuySlaves"]</xpath>
-            <nomatch Class="PatchOperationAdd">
-              <xpath>{TraderKindDef_Path}/stockGenerators</xpath>
-              <value>
-                <li Class="StockGenerator_BuySlaves" />
-              </value>
-            </nomatch>
+          <Operation Class="XmlExtensions.IfStatement">
+            <condition Class="XmlExtensions.Boolean.Comparison">
+              <value1>Defs/FactionDef/visitorTraderKinds/li</value1>
+              <value2>{TraderKindDef_Path}/defName</value2>
+              <fromXml1>true</fromXml1>
+              <fromXml2>true</fromXml2>
+              <nonNumeric>true</nonNumeric>
+              <logic>or</logic>
+            </condition>
+            <caseFalse> 
+              <Operation Class="PatchOperationConditional">
+                <xpath>{TraderKindDef_Path}/stockGenerators/li[@Class="StockGenerator_Slaves" or @Class="StockGenerator_BuySlaves"]</xpath>
+                <nomatch Class="PatchOperationAdd">
+                  <xpath>{TraderKindDef_Path}/stockGenerators</xpath>
+                  <value>
+                    <li Class="StockGenerator_BuySlaves" />
+                  </value>
+                </nomatch>
+              </Operation>
+            </caseFalse>
           </Operation>
         </apply>
       </Operation>
