@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <EverybodyBuysSlaves_Restart_Text>All settings require restart to take effect.</EverybodyBuysSlaves_Restart_Text>
+  <EverybodyBuysSlaves_Checkbox_Text>Exclude visitors from auto patch</EverybodyBuysSlaves_Checkbox_Text>
+  
+</LanguageData>

@@ -9,12 +9,14 @@
       <li Class="XmlExtensions.Setting.Text">
         <text>All settings require restart to take effect.</text>
         <anchor>Middle</anchor>
+        <tKey>EverybodyBuysSlaves_Restart_Text</tKey>
       </li>
       <li Class="XmlExtensions.Setting.GapLine" />
       <li Class="XmlExtensions.Setting.Checkbox">
         <label>Exclude visitors from auto patch</label>
         <key>Exclude_Visitors</key>
         <defaultValue>false</defaultValue>
+        <tKey>EverybodyBuysSlaves_Checkbox_Text</tKey>
       </li>
     </settings>
   </XmlExtensions.SettingsMenuDef>
