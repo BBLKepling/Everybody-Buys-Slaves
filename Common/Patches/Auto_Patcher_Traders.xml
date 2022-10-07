@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[not(defName="Guest")]/stockGenerators[li[not(@Class="StockGenerator_Slaves") and not(@Class="StockGenerator_BuySlaves")]]</xpath> 
+    <value>
+      <li Class="StockGenerator_BuySlaves" />
+    </value>
+  </Operation>
+
+</Patch>

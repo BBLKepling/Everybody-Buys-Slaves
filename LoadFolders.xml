@@ -1,9 +1,16 @@
 <loadFolders>
-    <v1.3>
-
-      <!-- Vanilla -->
-
-        <li>1.3</li>
-
-    </v1.3>
+  <v1.1>
+    <li>Common</li>
+  </v1.1>
+  <v1.2>
+    <li>Common</li>
+  </v1.2>
+  <v1.3>
+    <li IfModNotActive="imranfish.xmlextensions">Common</li>
+    <li IfModActive="imranfish.xmlextensions">XML_Extensions</li>
+  </v1.3>
+  <v1.4>
+    <li IfModNotActive="imranfish.xmlextensions">Common</li>
+    <li IfModActive="imranfish.xmlextensions">XML_Extensions</li>
+  </v1.4>
 </loadFolders>

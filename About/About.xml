@@ -3,19 +3,11 @@
   <name>Everybody Buys Slaves</name>
   <author>BBLKepling</author>
   <supportedVersions>
+    <li>1.1</li>
+    <li>1.2</li>
     <li>1.3</li>
+    <li>1.4</li>
   </supportedVersions>
   <packageId>bblkepling.EverybodyBuysSlaves</packageId>
-  <description>Patches all traders that don't sell slaves to be able to buy them.</description>
-  <modDependencies>
-    <li>
-      <packageId>Imranfish.XMLExtensions</packageId>
-      <displayName>XML Extensions</displayName>
-      <downloadUrl>https://github.com/15adhami/XmlExtensions/releases</downloadUrl>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/2574315206</steamWorkshopUrl>
-    </li>
-  </modDependencies>
-  <loadAfter>
-    <li>Imranfish.XMLExtensions</li>
-  </loadAfter>
+  <description>Patches all traders that don't sell slaves to be able to buy them. A filter for visitors is available if XML Extentions is installed.</description>
 </ModMetaData>
