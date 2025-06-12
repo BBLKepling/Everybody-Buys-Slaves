@@ -17,4 +17,8 @@
     <li IfModNotActive="imranfish.xmlextensions">Common</li>
     <li IfModActive="imranfish.xmlextensions">XML_Extensions</li>
   </v1.5>
+  <v1.6>
+    <li IfModNotActive="imranfish.xmlextensions">Common</li>
+    <li IfModActive="imranfish.xmlextensions">XML_Extensions</li>
+  </v1.6>
 </loadFolders>
